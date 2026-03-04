@@ -2,7 +2,7 @@
   <div class="min-h-screen flex items-stretch">
 
     <!-- LEFT PANEL (FORM) -->
-    <div class="flex-1 flex items-center justify-center bg-gray-50 px-20 py-12">
+    <div class="hidden lg:flex lg:basis-[50%] lg:max-w-[50%] flex items-center justify-center bg-gray-50 px-20 py-12">
       <div class="w-full max-w-2xl">
 
         <!-- Logo -->
@@ -28,11 +28,11 @@
               School Name
             </label>
             <div class="relative">
-              <i class="pi pi-building absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+              <i class="pi pi-building absolute left-3 top-1/2 -translate-y-1/2 text-gray-700"></i>
               <input
                 type="text"
-                placeholder="e.g. Greenfield Academy"
-                class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none placeholder:text-gray-600 text-gray-600"
+                placeholder="e.g. Bingham University"
+                class="w-full pl-10 pr-4 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none placeholder:text-gray-600 text-gray-600"
               />
             </div>
           </div>
@@ -43,11 +43,11 @@
               Admin Full Name
             </label>
             <div class="relative">
-              <i class="pi pi-user absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+              <i class="pi pi-user absolute left-3 top-1/2 -translate-y-1/2 text-gray-700"></i>
               <input
                 type="text"
                 placeholder="e.g. Dr. Adebayo Okafor"
-                class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none placeholder:text-gray-600 text-gray-600"
+                class="w-full pl-10 pr-4 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none placeholder:text-gray-600 text-gray-600"
               />
             </div>
           </div>
@@ -58,11 +58,11 @@
               Email Address
             </label>
             <div class="relative">
-              <i class="pi pi-envelope absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+              <i class="pi pi-envelope absolute left-3 top-1/2 -translate-y-1/2 text-gray-700"></i>
               <input
                 type="email"
                 placeholder="admin@school.edu"
-                class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none placeholder:text-gray-600 text-gray-600"
+                class="w-full pl-10 pr-4 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none placeholder:text-gray-600 text-gray-600"
               />
             </div>
           </div>
@@ -75,11 +75,11 @@
                 Phone Number
               </label>
               <div class="relative">
-                <i class="pi pi-phone absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                <i class="pi pi-phone absolute left-3 top-1/2 -translate-y-1/2 text-gray-700"></i>
                 <input
                   type="tel"
                   placeholder="+234 801 234 5678"
-                  class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none placeholder:text-gray-600 text-gray-600"
+                  class="w-full pl-10 pr-4 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none placeholder:text-gray-600 text-gray-600"
                 />
               </div>
             </div>
@@ -90,15 +90,15 @@
               </label>
               <div class="relative">
                 <select
-                  class="w-full appearance-none pl-4 pr-10 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none bg-white"
+                  class="w-full appearance-none pl-4 pr-10 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none bg-white"
                 >
-                  <option value="">Select role</option>
-                  <option>School Admin</option>
-                  <option>Principal</option>
-                  <option>Exam Officer</option>
+                  <option value="" class="text-gray-700">Select role</option>
+                  <option class="text-gray-700">Vice Chancellor</option>
+                  <option class="text-gray-700">Exam Officer</option>
+                  <option class="text-gray-700">Dean of Student Affars</option>
                 </select>
 
-                <i class="pi pi-angle-down absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"></i>
+                <i class="pi pi-angle-down absolute right-3 top-1/2 -translate-y-1/2 text-gray-700 pointer-events-none"></i>
               </div>
             </div>
 
@@ -112,13 +112,17 @@
                 Password
               </label>
               <div class="relative">
-                <i class="pi pi-lock absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                <i class="pi pi-lock absolute left-3 top-1/2 -translate-y-1/2 text-gray-700"></i>
                 <input
-                  type="password"
+                  :type="showPassword ? 'text' : 'password'"
                   placeholder="Min. 8 chars"
-                  class="w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none placeholder:text-gray-600 text-gray-600"
+                  class="w-full pl-10 pr-10 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none placeholder:text-gray-600 text-gray-600"
                 />
-                <i class="pi pi-eye absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer"></i>
+                <i
+                  :class="showPassword ? 'pi pi-eye' : 'pi pi-eye-slash'"
+                  class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-700 cursor-pointer"
+                  @click="togglePasswordVisibility"
+                ></i>
               </div>
             </div>
 
@@ -127,13 +131,17 @@
                 Confirm Password
               </label>
               <div class="relative">
-                <i class="pi pi-lock absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                <i class="pi pi-lock absolute left-3 top-1/2 -translate-y-1/2 text-gray-700"></i>
                 <input
-                  type="password"
+                  :type="showConfirmPassword ? 'text' : 'password'"
                   placeholder="Repeat password"
-                  class="w-full pl-10 pr-10 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none placeholder:text-gray-600 text-gray-600"
+                  class="w-full pl-10 pr-10 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none placeholder:text-gray-600 text-gray-600"
                 />
-                <i class="pi pi-eye absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer"></i>
+                <i
+                  :class="showConfirmPassword ? 'pi pi-eye' : 'pi pi-eye-slash' "
+                  class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-700 cursor-pointer"
+                  @click="toggleConfirmPasswordVisibility"
+                ></i>
               </div>
             </div>
 
@@ -158,10 +166,10 @@
             Create Account
           </button>
 
-          <div class="flex items-center gap-4 text-gray-400 text-sm">
-            <div class="flex-1 h-px bg-gray-200"></div>
+          <div class="flex items-center gap-4 text-gray-700 text-sm">
+            <div class="flex-1 h-px bg-gray-700"></div>
             or
-            <div class="flex-1 h-px bg-gray-200"></div>
+            <div class="flex-1 h-px bg-gray-700"></div>
           </div>
 
           <p class="text-center text-sm text-gray-500">
@@ -178,7 +186,7 @@
     </div>
 
     <!-- RIGHT PANEL -->
-    <div class="hidden lg:flex w-1/2 relative overflow-hidden text-white">
+    <div class="hidden lg:flex lg:basis-[50%] lg:max-w-[50%] relative overflow-hidden text-white">
 
     <!-- Background Video -->
     <video
@@ -233,5 +241,16 @@
 </template>
 
 <script setup lang="ts">
-// No logic yet
+import { ref } from 'vue'
+
+const showPassword = ref(false)
+const showConfirmPassword = ref(false)
+
+const togglePasswordVisibility = () => {
+  showPassword.value = !showPassword.value
+}
+
+const toggleConfirmPasswordVisibility = () => {
+  showConfirmPassword.value = !showConfirmPassword.value
+}
 </script>
