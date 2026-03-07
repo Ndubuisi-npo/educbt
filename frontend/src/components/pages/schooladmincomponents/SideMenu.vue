@@ -1,5 +1,5 @@
 <template>
-  <aside class="w-64 bg-slate-900 text-white flex flex-col justify-between min-h-screen">
+  <aside class="w-64 h-full shrink-0 bg-slate-900 text-white flex flex-col justify-between">
     
     <!-- Brand -->
     <div>
@@ -45,12 +45,13 @@ const menu = [
   { name: 'Teachers', path: '/teachers', icon: 'pi pi-users' },
   { name: 'Students', path: '/students', icon: 'pi pi-user' },
   { name: 'Subjects', path: '/subjects', icon: 'pi pi-book' },
+  { name: 'Classes', path: '/classes', icon: 'pi pi-graduation-cap' },
   { name: 'Exams', path: '/exams', icon: 'pi pi-file' },
   { name: 'Results', path: '/results', icon: 'pi pi-chart-bar' },
   { name: 'Settings', path: '/settings', icon: 'pi pi-cog' }
 ];
 
 function isActive(path: string) {
-  return route.path === path;
+  return route.path === path || route.path.startsWith(`${path}/`);
 }
 </script>

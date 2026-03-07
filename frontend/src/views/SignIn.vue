@@ -68,9 +68,9 @@
         <div class="w-full max-w-md">
 
         <div class="text-center mb-8">
-          <span class="text-xs bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full">
+          <!-- <span class="text-xs bg-indigo-100 text-indigo-600 px-3 py-1 rounded-full">
             Admin Portal
-          </span>
+          </span> -->
 
           <h2 class="text-3xl font-semibold text-gray-800 mt-4">
             Welcome back
@@ -86,7 +86,7 @@
 
           <!-- Email -->
           <div>
-            <label class="block text-sm font-medium text-gray-700 mb-2">
+            <label class="block text-base font-medium text-gray-700 mb-2">
               Email Address
             </label>
 
@@ -96,14 +96,14 @@
               <input
                 type="email"
                 placeholder="admin@school.edu"
-                class="w-full pl-10 pr-4 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition placeholder:text-gray-600 text-gray-600"
+                class="w-full pl-10 pr-4 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition placeholder:text-gray-600 text-gray-600 text-lg"
               />
             </div>
           </div>
 
           <!-- Password -->
           <div>
-            <label class="block text-sm font-medium text-gray-700 mb-2">
+            <label class="block text-base font-medium text-gray-700 mb-2">
               Password
             </label>
 
@@ -113,7 +113,7 @@
               <input
                 :type="showPassword ? 'text' : 'password'"
                 placeholder="••••••••"
-                class="w-full pl-10 pr-10 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition placeholder:text-gray-600 text-gray-600"
+                class="w-full pl-10 pr-10 py-3 border border-gray-700 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition placeholder:text-gray-600 text-gray-600 text-lg"
               />
 
               <i
@@ -125,7 +125,7 @@
           </div>
 
           <!-- Remember + Forgot -->
-          <div class="flex items-center justify-between text-sm">
+          <div class="flex items-center justify-between text-base">
             <label class="flex items-center gap-2 text-gray-600">
               <input type="checkbox" class="rounded border-gray-300">
               Remember me
@@ -144,17 +144,17 @@
             Sign In
           </button>
 
-          <div class="flex items-center gap-4 text-gray-700 text-sm">
+          <div class="flex items-center gap-4 text-gray-700 text-base">
             <div class="flex-1 h-px bg-gray-700"></div>
             or
             <div class="flex-1 h-px bg-gray-700"></div>
           </div>
 
-          <p class="text-center text-sm text-gray-500">
+          <p class="text-center text-base text-gray-500">
             Don't have an account?
-            <a href="/signup" class="text-indigo-600 font-medium hover:underline">
+            <Link to="/signup" class="text-indigo-600 font-medium hover:underline">
               Sign up
-            </a>
+            </Link>
           </p>
 
         </form>
@@ -167,7 +167,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from 'vue';
+import { RouterLink as Link } from 'vue-router';
 
 const showPassword = ref(false)
 
